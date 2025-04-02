@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="lista-libros.component.css">
+
+<div class="container">
+    <div class="container text-center mt-5">
+        <h2>Biblioteca</h2>
+
+        <table class="table table-light table-hover align-middle table-striped mt-5">
+          <thead class="table-info">
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Genero</th>
+              <th scope="col">Fecha publicación</th>
+            </tr>
+          </thead>
+          <tbody>
+             @for (libro of librosLista; track libro.id){
+              <tr scope="row">
+              <td>{{libro.id}}</td>
+              <td>{{libro.titulo}}</td>
+              <td>{{libro.autor}}</td>
+              <td>{{libro.genero}}</td>
+              <td>{{libro.fechaPublicacion}}</td>
+            </tr>
+             }
+         
+          </tbody>
+        </table>
+    </div>
+
+   
+</div>
