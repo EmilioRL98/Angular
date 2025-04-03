@@ -1,0 +1,69 @@
+img{
+    max-width: 200px;
+    display: block;
+    filter: drop-shadow(1px 5.5px rgba(0, 0, 0, 0.7)) sepia(0.8) saturate(6);
+   
+}
+
+table{
+    border-radius: 8px; 
+    overflow: hidden; 
+    background-color: #f4f7fa ;
+}
+
+table th{
+   padding: 17px;
+}
+
+table td{
+    height: 70px;
+}
+
+.editar{
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.borrar{
+   background-color: #f44336;
+   color: #ffffff;
+}
+
+thead{
+    background-color: #2d3e50;
+    color: white;
+}
+
+th{
+    font-weight: normal;
+}
+
+thead:hover{
+    background-color: #3e4c62;
+}
+
+.titulo .texto{
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(71, 41, 1, 0.4); 
+    letter-spacing: 1px; 
+    line-height: 1.5;
+}
+
+
+.editar, .borrar{
+   transition: background-color 0.3s ease, transform 0.3s ease;
+   padding-inline: 12px;
+   padding-block: 10px;
+}
+
+.editar:hover{
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.borrar:hover{
+    background-color: #e53935;
+    transform: scale(1.05);
+}

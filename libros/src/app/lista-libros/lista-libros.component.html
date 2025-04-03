@@ -1,20 +1,24 @@
 <link rel="stylesheet" href="lista-libros.component.css">
 
 <div class="container">
-    <div class="container text-center mt-5">
-        <h2>Biblioteca</h2>
-
-        <table class="table table-light table-hover align-middle table-striped mt-5">
-          <thead class="table-info">
+    <div class="container text-center mt-2">
+      <div class="titulo d-flex justify-content-center align-items-center">
+        <h2 class="texto">BookBase</h2> <img class="img-fluid" src="assets/logo.png" alt="no se encuentra la imagen">
+      </div>
+    
+        <table class="table table-hover align-middle table-striped mt-4">
+          <thead>
             <tr>
               <th scope="col">Id</th>
               <th scope="col">Titulo</th>
               <th scope="col">Autor</th>
               <th scope="col">Genero</th>
               <th scope="col">Fecha publicación</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
+            <!--Para cada libro de la lista creamos una nueva fila con sus datos-->
              @for (libro of librosLista; track libro.id){
               <tr scope="row">
               <td>{{libro.id}}</td>
@@ -22,6 +26,13 @@
               <td>{{libro.autor}}</td>
               <td>{{libro.genero}}</td>
               <td>{{libro.fechaPublicacion}}</td>
+              <td class="text-center">
+                <div>
+                  <button class="btn btn-sm me-3 editar" (click)="editarLibro(libro.id)">Editar</button>
+                  <button class="btn btn-sm borrar" (click)="borrarLibro(libro.id)">Borrar</button>
+                </div>
+             
+              </td>
             </tr>
              }
          

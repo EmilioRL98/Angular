@@ -1,0 +1,23 @@
+
+.nav-link{
+    color: black;
+    font-size: larger;
+    color: #ffff;
+}
+
+.nav-link:hover{
+    color: #ffeb3b; 
+}
+
+
+
+.navbar{
+    background-color: #2d3e50;
+    transition: background-color 0.3s ease; 
+   
+}
+
+.navbar:hover{
+    background-color: #3e4c62;
+   
+}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LibroService } from '../libro.service';
 import { Libro } from '../libro';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 
 
@@ -15,7 +15,7 @@ import { RouterOutlet } from '@angular/router';
 export class ListaLibrosComponent {
   librosLista:Libro[];
  
-  constructor(private libroService : LibroService ){}
+  constructor(private libroService : LibroService, private routers:Router){}
 
   ngOnInit(){  
     //este metodo se ejecuta al iniciar la aplicacion
@@ -29,5 +29,20 @@ export class ListaLibrosComponent {
         this.librosLista=lamd;
       })
     )
+  }
+
+  editarLibro(id:number){
+    //cuando pulsamos el boton editar, 
+    //navegamos el componente editar y pasamos el id del libro
+    this.routers.navigate(['editar',id]);
+  }
+
+  //borramos libro segun su id
+  borrarLibro(id:number){
+    this.libroService.borrarLibro(id).subscribe({
+      next: (lamd)=>
+        this.listarTodosLosLibros(),
+        error:(err:any)=>console.log(err)
+    });
   }
 }

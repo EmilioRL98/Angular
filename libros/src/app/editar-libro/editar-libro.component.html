@@ -1,8 +1,10 @@
+
 <div class="container mt-5">
     <div class="text-center" style="margin: 30px;">
-        <h3>Agregar libro</h3>
+        <h3>Editar libro</h3>
     </div>
 
+    <!--comunicamos los datos del formulario entre archivos-->
     <form [formGroup]="applyForm" (submit)="onSubmit()">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Titulo</label>
@@ -21,7 +23,7 @@
             <input type="text" class="form-control" id="fecha" formControlName="fechaPublicacion">
           </div>
 
-        <button type="submit" class="btn me-3 mt-4 agregar">Agregar</button>
+        <button type="submit" class="btn me-3 mt-4 agregar">Actualizar</button>
         <a type="submit" href="/" class="btn mt-4 volver">Volver</a>
       </form>
 

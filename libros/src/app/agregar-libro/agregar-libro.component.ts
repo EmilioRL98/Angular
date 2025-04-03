@@ -18,7 +18,6 @@ export class AgregarLibroComponent {
   //que a su vez nos devuelve a inicio
  onSubmit(){
   this.libro = this.applyForm.value as Libro;
-
     this.guardarLibro();
     
   }
@@ -39,7 +38,6 @@ export class AgregarLibroComponent {
   console.log("redirigiendo");
     this.enrutador.navigate(['/inicio']);
   }
-
 
   applyForm = new FormGroup({
     titulo: new FormControl(''),

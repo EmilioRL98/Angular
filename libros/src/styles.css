@@ -4,6 +4,16 @@
 }
 
 body{
-    background-color: rgb(43, 43, 43) !important;
-    color: rgb(241, 241, 241) !important;
+    background-color:#D4B8A0 !important;
+    color: black!important;
 }
+
+
+.page-footer {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #2d3e50;
+    text-align: center;
+    color: white;
+}
+
